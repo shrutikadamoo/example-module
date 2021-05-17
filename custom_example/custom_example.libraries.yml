@@ -1,0 +1,8 @@
+example_library:
+  version: 1.x
+  css:
+    component:
+      css/style.css: {}
+    
+  js:
+    js/main.js: {}

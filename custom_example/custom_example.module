@@ -1,0 +1,38 @@
+
+<?php
+
+
+function custom_example_preprocess_page() {
+
+}
+
+/**
+ * Implements hook_theme().
+ */
+// function custom_example_theme() {
+// 	print('hi in theme'); exit();
+// 	return array(
+// 		'example_block' => array(
+// 			'variables' => array('title' => NULL, 'site-name' => NULL, 'description' => NULL),
+// 			// 'template' => 'block--custom-example',
+// 		),
+// 	);
+// }
+
+/**
+ * Implements hook_theme().
+ */
+function custom_example_theme($existing, $type, $theme, $path) {	
+  return [
+    'example_block' => [
+      'variables' => ['title' => NULL, 'site_slogan' => NULL, 'description' => NULL,],
+		],
+	];
+}
+
+/**
+ * Implements hook_theme_suggestions_HOOK() for contact form suggestion.
+ */
+function custom_example_theme_suggestions_form_alter(array &$suggestions, array $variables) {
+	$suggestions[] = 'form__' . $variables['element']['#form_id'];
+}

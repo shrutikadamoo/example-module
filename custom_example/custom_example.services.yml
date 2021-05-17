@@ -1,0 +1,5 @@
+services:
+  custom_example.twig_extension:
+    class: Drupal\custom_example\TwigExtension\AddSiteLink
+    tags:
+      - { name: twig.extension }

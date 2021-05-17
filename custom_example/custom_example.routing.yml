@@ -1,0 +1,15 @@
+custom_example.content:
+  path: '/custom-example' 
+  defaults: 
+    _controller: '\Drupal\custom_example\Controller\ExampleController::content' 
+    _title: 'Hello World'
+  requirements: 
+    _permission: 'access content' 
+
+custom_example.form_example:
+  path: '/form-example' 
+  defaults: 
+    _form: '\Drupal\custom_example\Form\ExampleForm' 
+    _title: 'Hello World'
+  requirements: 
+    _permission: 'access content' 
